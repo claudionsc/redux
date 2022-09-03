@@ -1,7 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 
-function toggleLesson(lesson, module){
+function toggleLesson(module, lesson){
     return {
         type: 'TOGGLE_LESSON',
         module,
@@ -14,7 +14,7 @@ function toggleLesson(lesson, module){
     <aside>
         { modules.map(module => (
             <div key={module.id}>
-                <strong>{module.title}</strong>
+                <strong>{modules.title}</strong>
                 <ul>
                     { module.lessons.map(lesson => (
                         <li key={lesson.id}>
